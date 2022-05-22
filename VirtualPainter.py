@@ -123,7 +123,7 @@ while True:
     convertedFrame = cv.cvtColor(frameThreshold, cv.COLOR_GRAY2BGR)
 
     # The 'frame' is merged with 'convertedFrame' with 'bitwise and' method to show the drawn lines on the 'frame'
-    frame = cv.bitwise_and(frame, frameThreshold)
+    frame = cv.bitwise_and(frame, convertedFrame)
 
     # Then the merged frame is merged with 'drawFrame' but this time with 'bitwise or' method to show the colors of the lines
     frame = cv.bitwise_or(frame, drawFrame)
